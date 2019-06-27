@@ -512,7 +512,6 @@ class Inbox extends React.Component {
     this.setState((state, props) => (
       Object.assign({}, state, {
         openEmail: false,
-        option: 'inbox',
       })
     ))
   }
