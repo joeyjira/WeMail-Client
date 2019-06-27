@@ -1,0 +1,39 @@
+.signup-container {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-choice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: RGB(65, 153, 223);
+}
+
+.registration-choice:hover {
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.flex-row-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-firstname {
+  width: 45%;
+}
+
+.signup-lastname {
+  width: 45%;
+}

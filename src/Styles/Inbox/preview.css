@@ -1,0 +1,76 @@
+.preview-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 8px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.preview-email {
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+
+}
+
+.preview-sender {
+  flex: 1;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.preview-date {
+  display: flex;
+  flex: 1;
+  font-weight: bold;
+  justify-content: flex-end;
+  margin-right: 8px;
+  font-size: 0.8em;
+}
+
+.preview-row {
+  display: flex;
+  justify-content: flex-start;
+  flex: 5;
+  overflow: hidden;
+}
+
+.preview-subject {
+  font-weight: bold;
+}
+
+.preview-message {
+  color: RGB(110, 110, 110);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.material-icons {
+  color: RGB(112, 112, 112);
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.preview-read {
+  background: RGB(245, 247, 247);
+  font-weight: lighter;
+}
+
+input[type="checkbox"]:checked {
+  position: relative;
+}
+
+input[type="checkbox"]:not(:checked) {
+  position: relative;
+}
