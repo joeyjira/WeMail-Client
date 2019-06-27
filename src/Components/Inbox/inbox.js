@@ -570,6 +570,21 @@ class Inbox extends React.Component {
         </div>
 
         return options
+      } else if (this.state.option === 'starred') {
+        options = <div className="flex-row">
+          <i
+            className="material-icons hover-pointer hover-light margin8 paddding4 round-icon"
+            onClick={this.closeEmail}>
+            arrow_back
+          </i>
+          <i
+            className="material-icons hover-pointer hover-light margin8 paddding4 round-icon"
+            onClick={(e) => this.handleStarred(e, [this.state.inbox[this.state.mailIndex].id])}>
+            star
+          </i>
+        </div>
+
+        return options
       }
 
       options =
