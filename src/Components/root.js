@@ -23,7 +23,7 @@ class Root extends React.Component {
   }
 
   verifyCurrentUser() {
-    fetch('https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/current-user/', {
+    fetch('https://wemail.surf/emails/current-user/', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,

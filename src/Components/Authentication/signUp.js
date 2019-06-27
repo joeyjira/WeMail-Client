@@ -17,7 +17,7 @@ class SignUp extends React.Component {
   handleRegistration(e) {
     e.preventDefault()
 
-    fetch('https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/registration/', {
+    fetch('https://wemail.surf/emails/registration/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -35,7 +35,7 @@ class Email extends React.Component {
   }
 
   getPresignedURL() {
-    fetch(`https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/attachments/?email_id=${this.props.email.id}`, {
+    fetch(`https://wemail.surf/emails/attachments/?email_id=${this.props.email.id}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
