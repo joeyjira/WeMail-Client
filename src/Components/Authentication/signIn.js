@@ -13,7 +13,7 @@ class SignIn extends React.Component {
 
   handleSignIn(e) {
     e.preventDefault()
-    fetch('http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/token-auth/', {
+    fetch('https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/token-auth/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

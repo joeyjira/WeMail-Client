@@ -49,7 +49,7 @@ class Inbox extends React.Component {
   }
 
   getInbox() {
-    fetch('http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/inbox/', {
+    fetch('https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/inbox/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ class Inbox extends React.Component {
   }
 
   getSent() {
-    fetch('http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/sent/', {
+    fetch('https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/sent/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ class Inbox extends React.Component {
   }
 
   getStarred() {
-    fetch('http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/starred/', {
+    fetch('https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/starred/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ class Inbox extends React.Component {
   }
 
   getTrash() {
-    fetch('http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/trash/', {
+    fetch('https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/trash/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -222,7 +222,7 @@ class Inbox extends React.Component {
       data.append('attachments', file, file.name)
     }
 
-    fetch('http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/inbox/', {
+    fetch('https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/inbox/', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`,
@@ -248,7 +248,7 @@ class Inbox extends React.Component {
   }
 
   handleStarred(e, ids, callback) {
-    let url = "http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/starred/?email_id="
+    let url = "https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/starred/?email_id="
 
     for (let i = 0; i < ids.length; i++) {
       url += ids[i]
@@ -268,7 +268,7 @@ class Inbox extends React.Component {
   }
 
   handleDelete(e, ids, callback) {
-    let url = "http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/inbox/?email_id="
+    let url = "https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/inbox/?email_id="
 
     for (let i = 0; i < ids.length; i++) {
       url += ids[i]
@@ -288,7 +288,7 @@ class Inbox extends React.Component {
   }
 
   handleDeleteSent(e, ids, callback) {
-    let url = "http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/sent/?email_id="
+    let url = "https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/sent/?email_id="
 
     for (let i = 0; i < ids.length; i++) {
       url += ids[i]
@@ -308,7 +308,7 @@ class Inbox extends React.Component {
   }
 
   handleRecover(e, ids, callback) {
-    let url = "http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/trash/?email_id="
+    let url = "https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/trash/?email_id="
 
     for (let i = 0; i < ids.length; i++) {
       url += ids[i]
@@ -328,7 +328,7 @@ class Inbox extends React.Component {
   }
 
   handleDeleteForever(e, ids, callback) {
-    let url = "http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/trash/?email_id="
+    let url = "https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/trash/?email_id="
 
     for (let i = 0; i < ids.length; i++) {
       url += ids[i]
@@ -491,7 +491,7 @@ class Inbox extends React.Component {
 
     email.read = true
 
-    fetch(`http://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/inbox/?email_id=${email.id}`, {
+    fetch(`https://ec2-13-57-223-124.us-west-1.compute.amazonaws.com/emails/inbox/?email_id=${email.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
